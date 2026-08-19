@@ -1,0 +1,83 @@
+.category-edit-backdrop {
+  font-family: IRANSansX, IRANSans, Tahoma, sans-serif;
+  position: fixed;
+  z-index: 110;
+  inset: 0;
+  background: rgba(20, 17, 13, 0.48);
+  backdrop-filter: blur(3px);
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  direction: rtl;
+}
+.category-edit-modal {
+  width: min(440px, 100%);
+  position: relative;
+  background: #fff;
+  border: 1px solid #e9dfd3;
+  border-radius: 15px;
+  padding: 24px;
+  box-shadow: 0 24px 70px rgba(22, 16, 8, 0.22);
+}
+.category-edit-modal h3 {
+  font-size: 15px;
+}
+.category-edit-modal > p {
+  font-size: 9px;
+  color: #777;
+  margin: 7px 0 20px;
+}
+.category-edit-close {
+  position: absolute;
+  left: 13px;
+  top: 13px;
+  width: 31px;
+  height: 31px;
+  border: 0;
+  border-radius: 8px;
+  background: #f7f4ef;
+  display: grid;
+  place-items: center;
+}
+.category-edit-close svg {
+  width: 15px;
+}
+.category-edit-modal label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 14px;
+}
+.category-edit-modal label span {
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+.category-edit-modal label b {
+  color: #df3b3b;
+}
+.category-edit-modal input {
+  height: 43px;
+  border: 1px solid #e5dbcf;
+  border-radius: 8px;
+  padding: 0 11px;
+  font: inherit;
+  font-size: 10px;
+  outline: 0;
+}
+.category-edit-modal input:focus {
+  border-color: #d3a04a;
+  box-shadow: 0 0 0 3px rgba(211, 160, 74, 0.09);
+}
+.category-edit-modal label small {
+  font-size: 8px;
+  color: #cf3939;
+  margin-top: 5px;
+}
+.category-edit-modal footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  margin-top: 21px;
+  padding-top: 16px;
+  border-top: 1px solid #eee7df;
+}

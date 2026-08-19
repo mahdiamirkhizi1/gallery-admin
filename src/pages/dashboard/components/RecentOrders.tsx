@@ -1,0 +1,6 @@
+import { Card } from "@/components/ui/Card";
+import { StatusBadge, type StatusTone } from "@/components/ui/StatusBadge";
+import type { ApiOrder, OrderStatus } from "../dashboard.types";
+
+const labels: Record<OrderStatus,[string,StatusTone]>={PENDING_PAYMENT:["در انتظار پرداخت","warning"],PARTIALLY_PAID:["پرداخت بخشی","neutral"],PAID:["پرداخت شده","success"],PROCESSING:["در حال آماده‌سازی","info"],SHIPPED:["ارسال شده","neutral"],COMPLETED:["تکمیل شده","success"],CANCELLED:["لغو شده","danger"]};
+export function RecentOrders({ orders }: { orders: ApiOrder[] }) { return <Card title="آخرین سفارش‌ها" className="recent-orders"><div className="table-wrap"><table><thead><tr><th>شماره سفارش</th><th>مشتری</th><th>محصولات</th><th>مبلغ</th><th>وضعیت</th><th>تاریخ</th></tr></thead><tbody>{orders.map(order=><tr key={order.id}><td><strong>#{order.id}</strong></td><td>کاربر {order.userId}</td><td>{order.orderItems.length} محصول</td><td>{new Intl.NumberFormat("fa-IR").format(Number(order.totalAmount))} تومان</td><td><StatusBadge tone={labels[order.status][1]}>{labels[order.status][0]}</StatusBadge></td><td>{new Intl.DateTimeFormat("fa-IR",{dateStyle:"short"}).format(new Date(order.createdAt))}</td></tr>)}</tbody></table></div></Card>; }

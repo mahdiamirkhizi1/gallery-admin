@@ -1,0 +1,34 @@
+.cp-stepper button:first-child::before{display:block}
+.cp-stepper button:last-child::before{display:none}
+.cp-rules-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cp-jalali{height:44px;border:1px solid #e7ded2;border-radius:8px;display:grid;grid-template-columns:58px minmax(92px,1fr) 76px auto 52px auto 52px;align-items:center;overflow:hidden;background:#fff;direction:rtl}
+.cp-jalali:focus-within{border-color:#d5a24b;box-shadow:0 0 0 3px rgba(213,162,75,.09)}
+.cp-jalali select{height:42px;min-width:0;border:0;border-left:1px solid #eee7de;background:#fff;padding:0 7px;outline:0;font:inherit;color:#2c2823}
+.cp-jalali span{padding:0 8px;color:#888;white-space:nowrap;font-size:9px}
+.cp-jalali b{text-align:center;color:#999}
+.cp-product-toolbar{height:55px;display:flex;align-items:center;gap:15px;padding:0 14px;border-bottom:1px solid #eee6dd;background:#fcfaf7}
+.cp-product-toolbar .cp-search{height:38px;flex:1;max-width:390px;border:1px solid #e7ded2;border-radius:7px;background:#fff}
+.cp-product-toolbar>span{margin-right:auto;padding:6px 10px;border-radius:99px;background:#fff4df;color:#9b6810;font-size:9px;white-space:nowrap}
+.cp-product-table{max-height:285px;overflow:auto}
+.cp-product-row{display:grid!important;grid-template-columns:72px minmax(180px,1fr) 110px 125px;align-items:center;gap:12px;min-height:48px;padding:8px 14px!important;border-bottom:1px solid #f0eae3;cursor:pointer}
+.cp-product-row>input{justify-self:start;width:15px;height:15px;accent-color:#c78918}
+.cp-product-row strong{font-size:10px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cp-product-row>span{font-size:9px;color:#6f675e}
+.cp-product-row--head{position:sticky;top:0;z-index:1;min-height:40px!important;background:#faf7f2;color:#71675c;font-weight:700;cursor:default}
+.cp-product-row--head label{display:flex;align-items:center;gap:7px}.cp-product-row--head input{accent-color:#c78918}
+.cp-product-row:hover:not(.cp-product-row--head){background:#fffaf1}.cp-product-row.disabled{background:#fafafa;cursor:not-allowed}
+.cp-available{color:#278d43!important}.cp-conflict{color:#c43c3c!important}.cp-product-loading{padding:45px;text-align:center;color:#888}
+@media(max-width:720px){.cp-rules-grid{grid-template-columns:1fr}.cp-jalali{grid-template-columns:50px minmax(80px,1fr) 68px auto 46px auto 46px}.cp-product-table{overflow:auto}.cp-product-row{min-width:620px}}
+.cp-field--date{position:relative;overflow:visible}.cp-calendar{position:relative;width:100%}
+.cp-calendar__trigger{width:100%;height:44px;border:1px solid #e7ded2;border-radius:8px;background:#fff;display:flex;align-items:center;gap:10px;padding:0 12px;color:#302b25;text-align:right}
+.cp-calendar__trigger.active{border-color:#d5a24b;box-shadow:0 0 0 3px rgba(213,162,75,.09)}.cp-calendar__trigger>svg:first-child{width:18px;color:#b27a17}.cp-calendar__trigger>svg:last-child{width:15px;margin-right:auto;color:#999;transform:rotate(-90deg)}
+.cp-calendar__trigger span{font-size:10px;font-weight:500}.cp-calendar__trigger .placeholder{color:#aaa;font-weight:400}
+.cp-calendar__popover{position:absolute;z-index:40;top:51px;right:0;width:330px;padding:15px;background:#fff;border:1px solid #e6ddd2;border-radius:13px;box-shadow:0 18px 45px rgba(50,34,12,.16);direction:rtl}
+.cp-calendar__popover:before{content:"";position:absolute;top:-6px;right:22px;width:11px;height:11px;background:#fff;border-top:1px solid #e6ddd2;border-right:1px solid #e6ddd2;transform:rotate(-45deg)}
+.cp-calendar__popover header{height:39px;display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}.cp-calendar__popover header button{width:34px;height:34px;border:1px solid #eee5da;border-radius:8px;background:#fff;display:grid;place-items:center;color:#675d50}.cp-calendar__popover header button:hover{background:#fff8eb;color:#a76e0b}.cp-calendar__popover header svg{width:16px}.cp-calendar__popover header strong{font-size:12px}.cp-calendar__popover header strong b{margin-right:5px;color:#9d6b16}
+.cp-calendar__week,.cp-calendar__days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.cp-calendar__week{border-bottom:1px solid #f0e9df;padding-bottom:7px;margin-bottom:6px}.cp-calendar__week span{height:24px;display:grid;place-items:center;font-size:9px;font-weight:700;color:#8d8377}.cp-calendar__week span:last-child{color:#d54a4a}
+.cp-calendar__days>span,.cp-calendar__days>button{height:35px}.cp-calendar__days>button{border:0;border-radius:9px;background:transparent;font-size:10px;color:#3a342d;position:relative}.cp-calendar__days>button:hover{background:#fff2d9;color:#9c6510}.cp-calendar__days>button.today{box-shadow:inset 0 0 0 1px #d6a24a;color:#a56d0d}.cp-calendar__days>button.selected{background:linear-gradient(135deg,#dda12d,#b8780b);color:#fff;box-shadow:0 4px 10px rgba(181,117,9,.22)}
+.cp-calendar__time{height:45px;margin-top:10px;padding:0 10px;border-radius:9px;background:#faf7f2;display:flex;align-items:center;gap:7px}.cp-calendar__time svg{width:16px;color:#af7917}.cp-calendar__time span{font-size:9px;margin-left:auto;color:#70685e}.cp-calendar__time select{height:31px;width:55px;border:1px solid #e8dfd4;border-radius:7px;background:#fff;padding:0 5px;font:inherit;font-size:10px}.cp-calendar__time b{color:#999}
+.cp-calendar__popover footer{display:flex;justify-content:space-between;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid #eee7de}.cp-calendar__popover footer button{height:35px;border-radius:8px;padding:0 13px;font:inherit;font-size:9px}.cp-calendar__today{border:1px solid #e5dbcf;background:#fff;color:#6e655b}.cp-calendar__confirm{border:0;background:#2da14e;color:#fff;display:flex;align-items:center;gap:5px}.cp-calendar__confirm svg{width:14px}.cp-calendar__confirm:disabled{opacity:.5}
+@media(max-width:720px){.cp-calendar__popover{width:min(330px,calc(100vw - 60px));right:0}}
+.cp-taxonomy{display:grid;gap:15px;padding:15px;border:1px solid #e8dfd4;border-radius:10px;background:#fdfbf8}.cp-taxonomy>div>strong{display:block;font-size:10px;margin-bottom:8px;color:#554c42}.cp-taxonomy>small{font-size:8px;color:#7c7267;line-height:1.9}.cp-choice-grid--five{grid-template-columns:repeat(5,1fr)}.cp-taxonomy .cp-choice-grid label:has(input:checked){border-color:#d59a2b;background:#fff7e8;color:#955f08}@media(max-width:900px){.cp-choice-grid--five{grid-template-columns:repeat(3,1fr)}}@media(max-width:600px){.cp-choice-grid--five{grid-template-columns:repeat(2,1fr)}}

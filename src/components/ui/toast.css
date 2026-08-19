@@ -1,0 +1,113 @@
+.toast-viewport {
+  position: fixed;
+  z-index: 150;
+  top: 94px;
+  left: 24px;
+  width: min(370px, calc(100vw - 30px));
+  display: grid;
+  gap: 10px;
+  direction: rtl;
+  pointer-events: none;
+}
+.app-toast {
+  pointer-events: auto;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 38px 1fr 28px;
+  gap: 10px;
+  align-items: start;
+  padding: 13px 13px 14px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #e7ded3;
+  border-radius: 13px;
+  box-shadow: 0 12px 34px rgba(35, 25, 12, 0.14);
+  animation: toast-enter 0.24s ease-out;
+}
+.app-toast > i {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+.app-toast > i svg {
+  width: 20px;
+}
+.app-toast > div {
+  padding-top: 2px;
+}
+.app-toast strong {
+  display: block;
+  font-size: 11px;
+}
+.app-toast p {
+  margin: 5px 0 0;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.9;
+  color: #756d64;
+}
+.app-toast > button {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 7px;
+  background: #f7f4ef;
+  color: #8a8177;
+  display: grid;
+  place-items: center;
+}
+.app-toast > button svg {
+  width: 14px;
+}
+.app-toast--success > i {
+  background: #e8f7ec;
+  color: #239146;
+}
+.app-toast--error > i {
+  background: #ffebeb;
+  color: #d33d3d;
+}
+.app-toast--info > i {
+  background: #e9f1ff;
+  color: #397ac7;
+}
+.app-toast__timer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  transform-origin: right;
+  background: #32a453;
+  animation: toast-timer 4.5s linear forwards;
+}
+.app-toast--error .app-toast__timer {
+  background: #dc4444;
+  animation-duration: 6.5s;
+}
+.app-toast--info .app-toast__timer {
+  background: #4284d2;
+}
+@keyframes toast-enter {
+  from {
+    opacity: 0;
+    transform: translateX(-16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes toast-timer {
+  to {
+    transform: scaleX(0);
+  }
+}
+@media (max-width: 650px) {
+  .toast-viewport {
+    top: 78px;
+    left: 15px;
+  }
+}

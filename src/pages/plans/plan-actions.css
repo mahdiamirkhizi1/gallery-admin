@@ -1,0 +1,5 @@
+.plan-action-error{margin-bottom:12px;padding:10px 13px;border:1px solid #f1caca;border-radius:8px;background:#fff1f1;color:#bd3434;font-size:10px}
+.plan-actions button:first-child:not(:disabled){color:#b87410;background:#fff9ed;border-color:#ead2a7}
+.plan-actions button.plan-action--activate:not(:disabled){color:#278f47;background:#effaf2;border-color:#bfe2c9}
+.plan-actions button:last-child:not(:disabled){color:#d33c3c;background:#fff5f5;border-color:#efcaca}
+.plan-actions button:disabled{cursor:not-allowed;opacity:.38}

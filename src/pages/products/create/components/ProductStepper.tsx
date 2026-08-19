@@ -1,0 +1,2 @@
+const steps=["اطلاعات اصلی","مشخصات محصول","موجودی و سایزبندی","شرایط و پلن‌های فروش","بررسی و انتشار"];
+export function ProductStepper({step,onChange}:{step:number;onChange:(step:number)=>void}){return <div className="product-stepper">{steps.map((label,index)=>{const number=index+1;return <button key={label} className={number===step?"active":number<step?"done":""} onClick={()=>number<step&&onChange(number)}><i>{number}</i><span>{label}</span></button>})}</div>}
